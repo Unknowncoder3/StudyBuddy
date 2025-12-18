@@ -59,23 +59,27 @@ StudyBuddy brings together multiple intelligent tools — **code analysis, voice
 
 > A visual walkthrough of the platform
 
-### 🏠 Dashboard
+### 👤 Login
+![Dashboard](screenshots/01-dashboard.png)
 
+### 🏠 Dashboard
 ![Dashboard](screenshots/dashboard.png)
 
 ### 💻 AI Code Analyzer
-
-![Code Analyzer](screenshots/code.png)
+![AI Code Analyzer](screenshots/02-code-analyzer.png)
 
 ### 🎤 AI Voice Assistant
-
-![Voice Assistant](screenshots/voice.png)
+![AI Voice Assistant](screenshots/03-voice-assistant.png)
 
 ### 📄 AI PDF Analyzer
+![AI PDF Analyzer](screenshots/04-pdf-analyzer.png)
 
-![PDF Analyzer](screenshots/pdf.png)
+### 🌐 AI Web Scraper
+![AI Web Scraper](screenshots/05-web-scraper.png)
 
----
+### 🎥 AI Video Analyzer
+![AI Video Analyzer](screenshots/06-video-analyzer.png)
+
 
 ## 🛠️ Tech Stack
 
