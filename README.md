@@ -60,11 +60,10 @@ StudyBuddy brings together multiple intelligent tools — **code analysis, voice
 > A visual walkthrough of the platform
 
 ### 👤 Login
-![Dashboard](screenshots/dashboard.png)
-## 📸 Application Screenshots
+![Dashboard](screenshots/01-dashboard.png)
 
 ### 🏠 Dashboard
-![Dashboard](screenshots/01-dashboard.png)
+![Dashboard](screenshots/dashboard.png)
 
 ### 💻 AI Code Analyzer
 ![AI Code Analyzer](screenshots/02-code-analyzer.png)
