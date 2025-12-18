@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Voice Assistant | StudyBuddy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tool.css') }}">
+</head>
+
+<body>
+<div class="tool-container">
+
+    <h1>🎤 AI Voice Assistant</h1>
+
+    <!-- CHAT AREA -->
+    <div class="card chat-box" id="chatBox">
+        <p class="muted">Start a conversation…</p>
+    </div>
+
+    <!-- INPUT + MIC -->
+    <div class="card voice-input">
+        <button id="micBtn" title="Speak">🎤</button>
+
+        <input
+            type="text"
+            id="voiceInput"
+            placeholder="Ask something..."
+        />
+
+        <button id="sendBtn">Send</button>
+    </div>
+
+    <!-- LOADER -->
+    <div id="loader" class="loader hidden"></div>
+
+    <a class="back-link" href="{{ url_for('dashboard') }}">← Back to Dashboard</a>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/voice.js') }}"></script>
+</body>
+</html>

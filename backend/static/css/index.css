@@ -1,0 +1,259 @@
+:root {
+    --primary-color: #818cf8;
+    --primary-light: #a5b4fc;
+    --primary-dark: #6366f1;
+
+    --bg-color: #0f172a;
+    --card-bg: #1b2541;
+
+    --text-color: #f1f5f9;
+    --text-secondary: #94a3b8;
+
+    --border-color: #334155;
+
+    --shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    --shadow-hover: 0 14px 36px rgba(0, 0, 0, 0.35);
+
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    --success-color: #10b981;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color .3s ease, color .3s ease, border .3s ease;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* ================= HEADER ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.logo {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--primary-light);
+}
+
+/* PROFILE */
+.user-profile {
+    cursor: pointer;
+    position: relative;
+}
+
+.user-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #000;
+}
+
+/* PROFILE DROPDOWN */
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background: var(--card-bg);
+    border-radius: 14px;
+    width: 220px;
+    box-shadow: var(--shadow);
+    padding: 15px;
+    z-index: 10;
+}
+
+.profile-dropdown ul {
+    list-style: none;
+}
+
+.profile-dropdown li {
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: .95rem;
+    color: var(--text-color);
+}
+
+.profile-dropdown li:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.profile-name {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 14px;
+}
+
+.hero p {
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+/* STATS */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 35px;
+}
+
+.stats div {
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-light);
+}
+
+/* ================= TOOLS ================= */
+.tools-section {
+    margin-top: 60px;
+}
+
+.tools-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* GRID */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+/* CARD */
+.tool-card {
+    background: var(--card-bg);
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: var(--gradient);
+}
+
+.tool-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.tool-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+}
+
+.tool-card p {
+    color: var(--text-secondary);
+    font-size: .95rem;
+    margin-bottom: 18px;
+}
+
+.tool-card ul {
+    list-style: none;
+}
+
+.tool-card li {
+    margin-bottom: 8px;
+    font-size: .9rem;
+    color: var(--success-color);
+}
+
+.tool-card li::before {
+    content: "✔ ";
+}
+
+.launch {
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: 600;
+    color: var(--primary-light);
+    cursor: pointer;
+}
+
+.launch:hover {
+    text-decoration: underline;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    margin-top: 80px;
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-links {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.loading {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}

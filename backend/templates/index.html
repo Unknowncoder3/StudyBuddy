@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyBuddy | Intelligent Tools Dashboard</title>
+
+    <!-- ICONS + FONTS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body>
+<div class="container">
+
+<header>
+    <div class="logo">StudyBuddy</div>
+
+    <div class="header-controls">
+        <div class="user-profile" id="profileBtn">
+            <div class="user-avatar" id="avatar">U</div>
+        </div>
+
+        <div class="profile-dropdown" id="profileMenu">
+            <div class="profile-name" id="profileName">Username</div>
+            <ul>
+                <li class="theme-item">
+                    <i class="fas fa-moon"></i> Theme
+                    <ul class="theme-submenu">
+                        <li data-theme="dark">🌙 Dark</li>
+                        <li data-theme="light">☀️ Light</li>
+                        <li data-theme="yellow">🌕 Warm</li>
+                    </ul>
+                </li>
+                <li><i class="fas fa-cog"></i> Settings</li>
+                <li><i class="fas fa-clock"></i> History</li>
+                <li><i class="fas fa-download"></i> Downloads</li>
+                <li class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <a href="{{ url_for('logout') }}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Intelligent AI Tools for Modern Workflows</h1>
+    <p>Access powerful AI models designed to automate, analyze, and enhance your productivity.</p>
+
+    <div class="stats">
+        <div>
+            <div class="stat-value">5</div>
+            <div>AI Tools</div>
+        </div>
+        <div>
+            <div class="stat-value">12.7K</div>
+            <div>Completed Tasks</div>
+        </div>
+        <div>
+            <div class="stat-value">22/7</div>
+            <div>Availability</div>
+        </div>
+    </div>
+</section>
+
+<section class="tools-section">
+<h2>Featured AI Tools</h2>
+
+<div class="tools-grid">
+
+    <div class="tool-card">
+        <h3>🎬 AI Video Analyzer</h3>
+        <p>Extract insights and detect objects using computer vision.</p>
+        <ul>
+            <li>Object detection</li>
+            <li>Scene analysis</li>
+            <li>Auto transcription</li>
+        </ul>
+        <span class="launch" data-tool="video">Launch Tool →</span>
+    </div>
+
+    <div class="tool-card">
+        <h3>🌐 AI Web Scraper</h3>
+        <p>Intelligently extract and structure data from websites.</p>
+        <ul>
+            <li>Dynamic content</li>
+            <li>Auto-structuring</li>
+            <li>Scheduling</li>
+        </ul>
+        <span class="launch" data-tool="web">Launch Tool →</span>
+    </div>
+
+    <div class="tool-card">
+        <h3>🎤 AI Voice Assistant</h3>
+        <p>Natural language voice interface for intelligent conversation.</p>
+        <ul>
+            <li>Multi-language</li>
+            <li>Context-aware</li>
+            <li>Integrations</li>
+        </ul>
+        <span class="launch" data-tool="voice">Launch Tool →</span>
+    </div>
+
+    <div class="tool-card">
+        <h3>📄 AI PDF Summarizer</h3>
+        <p>Summarize documents and ask questions from PDFs.</p>
+        <ul>
+            <li>Smart summary</li>
+            <li>Natural Q&A</li>
+            <li>Citation extraction</li>
+        </ul>
+        <span class="launch" onclick="window.location.href='/pdf'">Launch Tool →</span>
+    </div>
+
+    <div class="tool-card">
+        <h3>💻 AI Code Analyzer</h3>
+        <p>Review, debug, and optimize code intelligently.</p>
+        <ul>
+            <li>Security checks</li>
+            <li>Performance tips</li>
+            <li>Clean code rules</li>
+        </ul>
+        <span class="launch" data-tool="code">Launch Tool →</span>
+    </div>
+
+</div>
+</section>
+
+<!-- ================= TOOL PANEL ================= -->
+<section id="toolPanel" class="tool-panel" style="display:none;margin-top:60px;">
+    <h2 id="toolTitle"></h2>
+
+    <div id="videoTool" style="display:none;">🎬 Video Analyzer Loaded</div>
+    <div id="webTool" style="display:none;">🌐 Web Scraper Loaded</div>
+    <div id="voiceTool" style="display:none;">🎤 Voice Assistant Loaded</div>
+    <div id="pdfTool" style="display:none;">📄 PDF Q&A Loaded</div>
+    <div id="codeTool" style="display:none;">💻 Code Analyzer Loaded</div>
+</section>
+
+<footer>
+    <div class="footer-links">
+        <a href="#">Docs</a>
+        <a href="#">API</a>
+        <a href="#">Support</a>
+        <a href="#">Blog</a>
+    </div>
+    <p>© 2025 StudyBuddy. All rights reserved.</p>
+</footer>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>

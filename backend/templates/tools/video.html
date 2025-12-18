@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Video Analyzer | StudyBuddy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tool.css') }}">
+</head>
+
+<body>
+<div class="tool-container">
+
+    <h1>🎬 AI Video Analyzer</h1>
+
+    <!-- UPLOAD -->
+    <div class="card">
+        <h3>Upload Video</h3>
+        <input type="file" id="videoInput" accept="video/*">
+        <button id="analyzeBtn">Analyze</button>
+    </div>
+
+    <!-- TRANSCRIPT -->
+    <div class="card">
+        <h3>📜 Transcription</h3>
+        <textarea id="transcriptBox" rows="6" readonly
+                  placeholder="Transcript will appear here..."></textarea>
+        <button id="downloadTranscript">Download Transcript</button>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="card">
+        <h3>📝 Summary</h3>
+        <div id="summaryBox" class="output-box">
+            <p class="muted">Summary will appear here...</p>
+        </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="card">
+        <h3>⏱️ Timeline (Captions)</h3>
+        <ul id="timelineList" class="timeline-list">
+            <li class="muted">No captions yet</li>
+        </ul>
+    </div>
+
+    <!-- SAMPLED CAPTIONS -->
+    <div class="card">
+        <h3>🔍 Sampled Captions Preview</h3>
+        <ul id="captionPreview" class="timeline-list">
+            <li class="muted">No sampled captions yet</li>
+        </ul>
+        <button id="downloadCombined">
+            Download Aggregated (Transcript + Captions)
+        </button>
+    </div>
+    <div class="card input-row">
+    <button id="micBtn">🎤</button>
+    <input type="text" id="voiceInput" placeholder="Ask something..." />
+    <button id="sendBtn">Send</button>
+</div>
+
+
+    <!-- LOADER -->
+    <div id="loader" class="loader hidden"></div>
+
+    <a class="back-link" href="{{ url_for('dashboard') }}">← Back to Dashboard</a>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/video.js') }}"></script>
+</body>
+</html>

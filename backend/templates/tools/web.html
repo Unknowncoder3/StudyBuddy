@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Web Scraper | StudyBuddy</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tool.css') }}">
+</head>
+
+<body>
+<div class="tool-container">
+
+    <h1>🌐 AI Web Scraper</h1>
+
+    <!-- SCRAPE WEBSITE -->
+    <div class="card">
+        <h3>Scrape Website</h3>
+        <input type="text" id="urlInput" placeholder="Enter website URL">
+        <button id="scrapeBtn">Scrape</button>
+    </div>
+
+    <!-- LOADER -->
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- SCRAPED PREVIEW -->
+    <div class="card">
+        <h3>📄 Scraped Preview (First 1000 Characters)</h3>
+        <div id="previewBox" class="preview-box">
+            <p class="muted">No data yet</p>
+        </div>
+    </div>
+
+    <!-- ASK QUESTION -->
+    <div class="card">
+        <h3>Ask Question</h3>
+        <input type="text" id="questionInput" placeholder="Ask about the website">
+        <button id="askBtn">Ask</button>
+        <textarea
+            id="answerBox"
+            placeholder="Answer will appear here..."
+            readonly
+        ></textarea>
+    </div>
+
+    <a class="back-link" href="{{ url_for('dashboard') }}">← Back to Dashboard</a>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/web.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Code Analyzer | StudyBuddy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tool.css') }}">
+</head>
+
+<body>
+<div class="tool-container">
+
+    <h1>💻 AI Code Analyzer</h1>
+
+    <div class="card">
+        <h3>Paste Your Code</h3>
+
+        <select id="languageSelect">
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="java">Java</option>
+            <option value="cpp">C++</option>
+        </select>
+
+        <textarea id="codeInput" placeholder="Paste your code here..."></textarea>
+
+        <button id="analyzeBtn">Analyze Code</button>
+    </div>
+
+    <div class="card">
+        <h3>Analysis Result</h3>
+        <div id="analysisOutput">
+            <p class="muted">No analysis yet</p>
+        </div>
+    </div>
+
+    <div id="loader" class="loader hidden"></div>
+
+    <a class="back-link" href="{{ url_for('dashboard') }}">← Back to Dashboard</a>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/code.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+/* ===============================
+   GLOBAL
+=============================== */
+
+body {
+    background: var(--bg-color);
+    font-family: Inter, sans-serif;
+    color: var(--text-color);
+}
+
+.tool-container {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+/* ===============================
+   CARDS
+=============================== */
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+/* ===============================
+   INPUTS
+=============================== */
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+textarea {
+    min-height: 150px;
+}
+
+/* ===============================
+   BUTTONS
+=============================== */
+
+button {
+    margin-top: 10px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: #818cf8;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===============================
+   LINKS
+=============================== */
+
+.back-link {
+    color: #818cf8;
+    text-decoration: none;
+}
+
+/* ===============================
+   LOADER
+=============================== */
+
+.loader {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #334155;
+    border-top: 4px solid #818cf8;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ===============================
+   SCRAPED PREVIEW
+=============================== */
+
+.preview-box {
+    background: var(--bg-color);
+    border: 1px solid #334155;
+    padding: 16px;
+    border-radius: 12px;
+    max-height: 250px;
+    overflow-y: auto;
+    color: var(--text-color);
+    white-space: pre-wrap;
+    font-size: 14px;
+}
+
+/* ===============================
+   CHAT UI
+=============================== */
+
+.chat-box {
+    background: var(--bg-color);
+    border-radius: 12px;
+    padding: 12px;
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.chat {
+    margin: 10px 0;
+    padding: 12px 16px;
+    border-radius: 12px;
+    max-width: 75%;
+}
+
+.chat.user {
+    background: #6366f1;
+    color: white;
+    margin-left: auto;
+}
+
+.chat.bot {
+    background: var(--card-bg);
+    color: var(--text-color);
+    margin-right: auto;
+}
+
+/* ===============================
+   CODE ANALYZER
+=============================== */
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h4 {
+    margin-bottom: 8px;
+    color: #818cf8;
+}
+
+pre {
+    background: var(--bg-color);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    overflow-x: auto;
+    color: var(--text-color);
+}
+
+.suggestion {
+    background: var(--bg-color);
+    border-left: 4px solid #818cf8;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.suggestion .tag {
+    background: #334155;
+    color: var(--text-color);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 11px;
+    margin-left: 8px;
+}
+
+.error {
+    color: #f87171;
+    font-weight: 600;
+}
+
+/* ===============================
+   VOICE INPUT
+=============================== */
+
+.input-row {
+    display: flex;
+    gap: 10px;
+}
+
+#micBtn {
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    background: #334155;
+    color: white;
+    border: none;
+}
+
+#micBtn.listening {
+    background: #22c55e;
+}
+
+/* ===============================
+   MISC
+=============================== */
+
+.muted {
+    color: var(--text-secondary);
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI PDF Q&A | StudyBuddy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tool.css') }}">
+</head>
+
+<body>
+<div class="tool-container">
+
+    <h1>📄 AI PDF Q&A</h1>
+
+    <!-- UPLOAD -->
+    <div class="card">
+        <h3>Upload PDF</h3>
+        <input type="file" id="pdfFile" accept=".pdf">
+        <button id="uploadBtn">Upload & Analyze</button>
+    </div>
+
+    <!-- LOADER -->
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- SUMMARY -->
+    <div class="card">
+        <h3>📑 AI Generated Summary</h3>
+        <textarea id="summaryBox" readonly placeholder="Summary will appear here..."></textarea>
+        <button id="downloadSummaryBtn">Download Summary</button>
+    </div>
+
+    <!-- CHAT -->
+    <div class="card">
+        <h3>❓ Ask Questions</h3>
+        <input type="text" id="questionInput" placeholder="Ask about the PDF">
+        <button id="askBtn">Ask</button>
+
+        <div id="chatBox" class="chat-box"></div>
+    </div>
+
+    <a class="back-link" href="{{ url_for('dashboard') }}">← Back to Dashboard</a>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/pdf.js') }}"></script>
+</body>
+</html>
