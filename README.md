@@ -1,86 +1,105 @@
 
-# 🚀 StudyBuddy — Intelligent AI Tools Platform
+![GitHub stars](https://img.shields.io/github/stars/Unknowncoder3/StudyBuddy)
+![License](https://img.shields.io/github/license/Unknowncoder3/StudyBuddy)
+![Issues](https://img.shields.io/github/issues/Unknowncoder3/StudyBuddy)
 
-> **An all-in-one AI-powered productivity platform** that integrates multiple intelligent tools into a unified, modern web application.
+# 🎓 StudyBuddy — Intelligent AI Tools Platform
 
-StudyBuddy is designed to demonstrate **real-world AI integration, clean UI/UX, and full-stack engineering skills**, making it ideal for academic projects, demos, and recruiter evaluation.
+An **AI-powered, multi-tool productivity platform** designed to showcase **real-world AI integration, modern UI/UX, and full-stack engineering**.
 
----
+StudyBuddy brings together multiple intelligent tools — **code analysis, voice assistant, PDF understanding, video analysis, and web scraping** — into a single, unified web application.
 
-## ✨ Key Highlights
-
-✔ Multi-tool AI platform (not a single demo app)  
-✔ Clean, modern, theme-aware UI (Dark / Light / Warm)  
-✔ Modular backend architecture (easy to extend)  
-✔ Real-world AI use cases (code analysis, voice AI, PDFs, video, scraping)  
-✔ Production-ready folder structure and APIs  
+> 🚀 Built with **Flask + Vanilla JS + Python AI pipelines**  
+> 🧠 Designed to be **LLM-ready (OpenAI / Ollama / local models)**
 
 ---
 
-## 🧠 AI Tools Included
+## ✨ Key Features
+
+* 🧠 **AI Code Analyzer**
+  * Static code analysis
+  * Rule-based optimization suggestions
+  * High-level explanation of code structure
+  * Language-aware feedback (Python, JavaScript, Java, C++)
+
+* 🎤 **AI Voice Assistant**
+  * Microphone-based **Speech → Text**
+  * AI-generated responses
+  * **Text → Speech** voice output
+  * Conversational chat interface
+
+* 📄 **AI PDF Analyzer**
+  * Upload PDFs and ask questions
+  * Intelligent summarization
+  * Context-aware answers
+
+* 🎥 **AI Video Analyzer**
+  * Scene understanding
+  * Object-detection concepts
+  * Transcript-driven analysis
+
+* 🌐 **AI Web Scraper**
+  * Intelligent content extraction
+  * Structured data parsing
+  * Anti-blocking friendly design
+
+---
+
+## 🎨 UI / UX Highlights
+
+* 🌗 **Theme Switching** — Dark / Light / Warm
+* 👤 Profile menu with settings
+* ✨ Smooth animations & transitions
+* 📱 Responsive, modern layout
+* 🔐 Animated **Login ↔ Register** experience
+
+---
+
+## 📸 Application Screenshots
+
+> A visual walkthrough of the platform
+
+### 🏠 Dashboard
+
+![Dashboard](screenshots/dashboard.png)
 
 ### 💻 AI Code Analyzer
-- Static code analysis
-- Rule-based optimization suggestions
-- High-level explanation of code structure
-- Language-aware feedback (Python, JS, etc.)
+
+![Code Analyzer](screenshots/code.png)
 
 ### 🎤 AI Voice Assistant
-- Speech-to-Text (microphone input)
-- AI-powered responses
-- Text-to-Speech voice output
-- Conversational chat UI
+
+![Voice Assistant](screenshots/voice.png)
 
 ### 📄 AI PDF Analyzer
-- Upload PDFs and ask questions
-- Context-aware summarization
-- Information extraction
 
-### 🎥 AI Video Analyzer
-- Scene understanding
-- Object detection concepts
-- Intelligent transcript analysis
-
-### 🌐 AI Web Scraper
-- Intelligent content extraction
-- Structured data parsing
-- Anti-blocking friendly design
+![PDF Analyzer](screenshots/pdf.png)
 
 ---
 
-## 🎨 UI / UX Features
-
-- 🎭 **Theme switching** (Dark, Light, Warm)
-- 👤 Profile menu with settings
-- ✨ Smooth animations and transitions
-- 📱 Responsive layout
-- 🔐 Login & Register with animated transitions
-
----
-
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
-- HTML5
-- CSS3 (Custom design, no frameworks)
-- JavaScript (Vanilla JS)
-- Theme-driven UI using CSS variables
+* HTML5
+* CSS3 (custom design, no UI frameworks)
+* Vanilla JavaScript
+* CSS Variables for theme management
 
 ### Backend
-- Python
-- Flask
-- REST APIs
-- Modular tool routing
+* Python
+* Flask
+* REST APIs
+* Modular routing per AI tool
 
 ### AI / Processing
-- Rule-based analysis
-- NLP pipelines
-- Speech processing (STT / TTS ready)
-- Extendable for LLM integration (OpenAI / Ollama / etc.)
+* Rule-based static analysis
+* NLP pipelines
+* Speech-to-Text & Text-to-Speech
+* Extendable for LLM integration
 
 ---
 
-## 🗂 Project Structure
+## 📂 Project Structure
 
 ```
 
@@ -88,42 +107,59 @@ StudyBuddy/
 │
 ├── backend/
 │   ├── app.py
-│   ├── ai_modules/
-│   └── routes/
+│   ├── code_analyzer/
+│   ├── voice_assistant/
+│   └── pdf_analyzer/
 │
 ├── templates/
 │   ├── login.html
 │   ├── dashboard.html
 │   ├── code.html
-│   └── voice.html
+│   ├── voice.html
+│   └── pdf.html
 │
 ├── static/
 │   ├── css/
 │   ├── js/
 │   └── assets/
 │
-├── README.md
-└── requirements.txt
+├── requirements.txt
+└── README.md
 
 ````
 
 ---
 
-## 🚀 Getting Started
+## ⚙️ Installation & Setup
 
-### 1️⃣ Clone Repository
+### 1️⃣ Clone the Repository
+
 ```bash
-git clone https://github.com/yourusername/StudyBuddy.git
+git clone https://github.com/Unknowncoder3/StudyBuddy.git
 cd StudyBuddy
 ````
 
-### 2️⃣ Install Dependencies
+---
+
+### 2️⃣ Create Virtual Environment (Recommended)
+
+```bash
+python -m venv venv
+source venv/bin/activate   # macOS/Linux
+venv\Scripts\activate      # Windows
+```
+
+---
+
+### 3️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Run Application
+---
+
+### 4️⃣ Run the Application
 
 ```bash
 python app.py
@@ -137,53 +173,39 @@ http://127.0.0.1:5000
 
 ---
 
-## 🎯 Why This Project Matters
+## 🧪 How to Use
 
-This project demonstrates:
+1. Login / Register
+2. Select an AI tool from the dashboard
+3. Upload content or provide input
+4. View intelligent analysis & results
+5. Switch themes anytime
 
-✅ Full-stack development skills
-✅ AI feature integration
-✅ Clean UI/UX design thinking
-✅ Scalable architecture
-✅ Practical problem-solving mindset
 
-It reflects **how real AI tools are built — not just prototypes**.
 
----
-
-## 📸 Screenshots
-
-> *(Add screenshots here to instantly impress recruiters)*
-
-```md
-![Dashboard](screenshots/dashboard.png)
-![AI Code Analyzer](screenshots/code.png)
-![Voice Assistant](screenshots/voice.png)
-```
-
----
-
-## 🔮 Future Enhancements
+## 🚀 Future Enhancements
 
 * LLM-powered explanations (OpenAI / Ollama)
 * User history & analytics
-* Cloud deployment (AWS / Render / Vercel)
+* Cloud deployment (AWS / Render)
 * Role-based authentication
-* Real-time collaboration tools
+* Real-time collaboration features
 
 ---
 
-## 👨‍💻 Author
+## 👤 Author
 
 **Snehasish Das**
-Final Year Computer Science Student
-AI | Full-Stack | System Design
+Final Year CSBS Student | AI & Full-Stack Developer
 
-📧 Email: *[your-email@example.com](mailto:your-email@example.com)*
-🔗 GitHub: [https://github.com/yourusername](https://github.com/yourusername)
-🔗 LinkedIn: *optional but recommended*
+* GitHub: [https://github.com/Unknowncoder3](https://github.com/Unknowncoder3)
+* LinkedIn: [https://www.linkedin.com/in/snehasish-das-7a9803219](https://www.linkedin.com/in/snehasish-das-7a9803219)
 
 ---
 
-⭐ *If you like this project, give it a star — it really helps!*
+## ⭐ If you like this project
+
+Give it a **star ⭐** — it really helps!
+
+```
 
